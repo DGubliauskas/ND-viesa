@@ -10,20 +10,21 @@
     <style>
         body {
             padding: 20px;
+            font-family: sans-serif;
         }
 
         label {
             display: block;
             padding-bottom: 15px;
-            font-weight:bold;
-            font-size:small;
+            font-weight: bold;
+            font-size: small;
         }
 
         input[type="text"] {
             width: 100%;
-            border:none;
-            border-bottom:1px solid gray;
-            outline:none;
+            border: none;
+            border-bottom: 1px solid gray;
+            outline: none;
         }
 
         .box {
@@ -41,7 +42,7 @@
 
         .form {
             width: 70%;
-            
+
             padding: 40px;
 
         }
@@ -60,36 +61,50 @@
         }
 
         .nuorodos {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+
+
+        textarea {
+            border: none;
+            border-bottom: 1px solid gray;
+            width: 100%;
+            height: 50px;
+            font-family: sans-serif;
+
+
+        }
+
+        .nuorodos {
+            display: flex;
             flex-direction: column;
-            justify-content:center;
+        }
+
+        .tekstas {
+            width: 80%;
+            box-sizing: border-box;
         }
 
         .ikonos {
-            display: flex;
+            width: 20%;
+            box-sizing: border-box
         }
 
-        .ikonos p{
-            padding-left: 10px;
-
-        }
-        
-        textarea {
-            border:none;
-            border-bottom:1px solid gray;
-            width: 100%;
-            height: 50px;
-
-
-        }
         button {
             height: 40px;
             width: 150px;
-            border:none;
-            background-color:  #5cce93;
+            border: none;
+            background-color: #5cce93;
             color: white;
         }
 
-
+        .lygiavimas {
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 </head>
 
@@ -97,29 +112,53 @@
     <div class="box">
         <div class="kontaktai">
 
-            <p><h2>Let's get in touch</h2></p>
+            <p>
+            <h2>Let's get in touch</h2>
+            </p>
             <p>We're open for any suggestion or just to have a chat</p>
             <div class="nuorodos">
-                <div class="ikonos">
-                    <i class="fa fa-map-marker" style="font-size:36px"></i>
-                    <p>Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+                <div class="lygiavimas">
+                    <div class="ikonos">
+                        <i class="fa fa-map-marker" style="font-size:36px"></i>
+                    </div>
+                    <div class="tekstas">
+                        <p>Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+                    </div>
                 </div>
-                <div class="ikonos">
-                    <i class="fa fa-phone" style="font-size:36px"></i>
-                    <p>Phone: +1235 2355 98</p>
+
+                <div class="lygiavimas">
+                    <div class="ikonos">
+                        <i class="fa fa-phone" style="font-size:36px"></i>
+                    </div>
+                    <div class="tekstas">
+                        <p>Phone: +1235 2355 98</p>
+                    </div>
+
                 </div>
-                <div class="ikonos">
-                    <i class="fa fa-paper-plane" style="font-size:36px"></i>
-                    <p>Email: info@yoursite.com</p>
+                <div class="lygiavimas">
+                    <div class="ikonos">
+                        <i class="fa fa-paper-plane" style="font-size:36px"></i>
+                    </div>
+                    <div class="tekstas">
+                        <p>Email: info@yoursite.com</p>
+                    </div>
+
                 </div>
-                <div class="ikonos">
-                    <i class="fa fa-globe" style="font-size:36px"></i>
-                    <p>Website yoursite.com</p>
+                <div class="lygiavimas">
+                    <div class="ikonos">
+                        <i class="fa fa-globe" style="font-size:36px"></i>
+                    </div>
+                    <div class="tekstas">
+                        <p>Website yoursite.com</p>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="form">
-            <p><h2>Get in touch</h2></p>
+            <p>
+            <h2>Get in touch</h2>
+            </p>
             <form>
                 <div class="info">
                     <div class="kairedesine">
