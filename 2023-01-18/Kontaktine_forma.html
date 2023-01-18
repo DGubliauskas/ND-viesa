@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            padding-bottom: 15px;
+            font-weight:bold;
+            font-size:small;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            border:none;
+            border-bottom:1px solid gray;
+            outline:none;
+        }
+
+        .box {
+            display: flex;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .kontaktai {
+            width: 30%;
+            background-color: #5cce93;
+            color: white;
+            padding: 40px;
+        }
+
+        .form {
+            width: 70%;
+            
+            padding: 40px;
+
+        }
+
+        .info {
+            margin-bottom: 1rem;
+        }
+
+        .kairedesine {
+            display: flex;
+        }
+
+        .kaire {
+            width: 50%;
+            padding-right: 10px;
+        }
+
+        .nuorodos {
+            flex-direction: column;
+        }
+
+        .ikonos {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .ikonos p{
+            padding-left: 10px;
+
+        }
+        
+        textarea {
+            border:none;
+            border-bottom:1px solid gray;
+            width: 100%;
+            height: 50px;
+
+
+        }
+        button {
+            height: 40px;
+            width: 150px;
+            border:none;
+            background-color:  #5cce93;
+            color: white;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="kontaktai">
+
+            <p><h2>Let's get in touch</h2></p>
+            <p>We're open for any suggestion or just to have a chat</p>
+            <div class="nuorodos">
+                <div class="ikonos">
+                    <i class="fa fa-map-marker" style="font-size:36px"></i>
+                    <p>Address: 198 West 21th Street, Suite 721 New York NY 10016</p>
+                </div>
+                <div class="ikonos">
+                    <i class="fa fa-phone" style="font-size:36px"></i>
+                    <p>Phone: +1235 2355 98</p>
+                </div>
+                <div class="ikonos">
+                    <i class="fa fa-paper-plane" style="font-size:36px"></i>
+                    <p>Email: info@yoursite.com</p>
+                </div>
+                <div class="ikonos">
+                    <i class="fa fa-globe" style="font-size:36px"></i>
+                    <p>Website yoursite.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="form">
+            <p><h2>Get in touch</h2></p>
+            <form>
+                <div class="info">
+                    <div class="kairedesine">
+                        <div class="kaire">
+                            <label for="fname">FULL NAME</label>
+                            <input type="text" placeholder="Name" id="fname">
+                        </div>
+                        <div class="kaire">
+                            <label for="email">EMAIL ADRESS</label>
+                            <input type="text" placeholder="Email" id="email">
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="info">
+                    <label for="subject">SUBJECT</label>
+                    <input type="text" placeholder="Subject" id="subject">
+                </div>
+                <div class="info">
+                    <label for="subject">MESSAGE</label>
+                    <textarea placeholder="Message" id="subject"></textarea>
+                </div>
+                <div class="info">
+                    <button type="submit">Send message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
