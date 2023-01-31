@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <!--//Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus (Jonas Jonaitis). Atspausdinti trumpesnį stringą.-->
+
+    <script>
+        let vardas = "Mads";
+        let pavarde = "Mikkelsen";
+
+        console.log(vardas);
+        console.log(pavarde.length)
+
+        if (vardas.length == pavarde.length) {
+            console.log("Abu vardai yra tokio pačio ilgio.")
+        } else if (vardas.length > pavarde.length) {
+            console.log("Ilgesnis yra vardas " + vardas + ".")
+        } console.log("Ilgesnė yra pavardė " + pavarde + ".")
+
+    </script>
+
+    <!--Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). Parašykite kodą, kuris pagal gimimo metus paskaičiuotų jūsų amžių ir naudodamas vardo ir pavardės kintamuosius atspausdintų tokį sakinį :
+    "Aš esu Vardenis Pavardenis. Man yra XX metai(ų)". -->
+
+    <script>
+        manoVardas = "Dainius";
+        manoPavarde = "Gubliauskas";
+        manoGimimoMetai = 1996;
+        manoAmzius = 2023 - manoGimimoMetai;
+        console.log("Aš esu " + manoVardas + " " + manoPavarde + ". Man yra " + manoAmzius + " metai(-ų).")
+    </script>
+
+    <!--Sukurti du kintamuosius. Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus. Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš trijų paskutinių vardo ir pavardės kintamųjų raidžių. Jį atspausdinti. -->
+
+    <script>
+        let aktoriausVardas = "Petras";
+        let aktoriausPavarde = "Gražulis";
+        let paskutinesRaides = aktoriausVardas.slice(-3) + aktoriausPavarde.slice(-3);
+        console.log(paskutinesRaides);
+    </script>
+    
+    <!--Sukurti kintamąjį su stringu: “Once upon a time in hollywood”. Jame visas “o” (didžiąsias ir mažąsias) pakeisti žvaigždutėm “*”.  Rezultatą atspausdinti.-->
+
+    <script>
+        let holivudas = "Once upon a time in hollywood";
+        let pakeistosRaides = holivudas.replaceAll("O", "*").replaceAll("o", "*");
+        console.log(pakeistosRaides);
+    </script>
+    
+    <!--//Sukurkite keturis kintamuosius kuriems sugeneruokite atsitiktines reikšmes nuo 0 iki 2. Suskaičiuokite kiek yra nulių, vienetų ir dvejetų. -->
+
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        let a = rand(0, 2);
+        let b = rand(0, 2);
+        let c = rand(0, 2);
+        let d = rand(0, 2);
+        let x = 0;
+
+        if (a == 0) {
+            x++
+        }
+
+        if (b == 0) {
+            x++
+        }
+        if (c == 0) {
+            x++
+        }
+        if (d == 0) {
+            x++
+        }
+
+        console.log("Atsitiktiniai skaičiai: " + a + " " + b + " " + c + " " + d + ". " + "Nulių kiekis: " + x)
+
+    </script>
+</body>
+
+</html>
