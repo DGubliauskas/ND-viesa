@@ -432,3 +432,27 @@ margin-bottom:0.5rem;
     font-family: CerebriSans2;
     
 }
+
+.screenshots-examples ul{
+    display: flex;
+    width: 120%;
+    overflow:hidden;
+    align-items:center;
+    gap: 25px;
+    margin-left:-120px;
+}
+
+.active {
+    transform: scale(1.1)
+}
+
+#screenshots img {
+    display: block;
+    border: 2px solid rgb(240 240 240);
+    border-radius: 10px;
+}
+.screenshots-examples {
+    overflow:hidden;
+    padding:50px;
+    height: 100%;
+}
