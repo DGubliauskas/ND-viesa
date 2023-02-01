@@ -544,3 +544,45 @@ margin-bottom:0.5rem;
     left: -15px;
 
 }
+
+#plans .conditions {
+    height: 550px;
+    width: 350px;
+    box-shadow: 2px 2px 2px gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.conditionsprice {
+    
+}
+
+#plans .conditionsprice h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#plans .conditionsprice h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1f61eb;
+}
+
+#plans .conditionsprice span {
+    font-size: 16px;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.conditionslist li::before {
+    display: inline-block;
+    content: "";
+    vertical-align: -.125em;
+    background-image: url("data:image/svg+xml,<svg viewBox='0 0 16 16' fill='%23333' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' d='M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z' clip-rule='evenodd'/></svg>");
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
