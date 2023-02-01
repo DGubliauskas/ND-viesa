@@ -16,14 +16,11 @@
         let vardas = "Mads";
         let pavarde = "Mikkelsen";
 
-        console.log(vardas);
-        console.log(pavarde.length)
-
         if (vardas.length == pavarde.length) {
             console.log("Abu vardai yra tokio pačio ilgio.")
         } else if (vardas.length > pavarde.length) {
-            console.log("Ilgesnis yra vardas " + vardas + ".")
-        } console.log("Ilgesnė yra pavardė " + pavarde + ".")
+            console.log("Ilgesnis yra vardas: " + vardas + ".")
+        } console.log("Ilgesnė yra pavardė: " + pavarde + ".")
 
     </script>
 
@@ -68,6 +65,8 @@
         let c = rand(0, 2);
         let d = rand(0, 2);
         let x = 0;
+        let y = 0;
+        let z = 0;
 
         if (a == 0) {
             x++
@@ -82,31 +81,36 @@
         if (d == 0) {
             x++
         }
+        if (a == 1) {
+            y++
+        }
 
-        console.log("Atsitiktiniai skaičiai: " + a + " " + b + " " + c + " " + d + ". " + "Nulių kiekis: " + x)
+        if (b == 1) {
+            y++
+        }
+        if (c == 1) {
+            y++
+        }
+        if (d == 1) {
+            y++
+        }
+        if (a == 2) {
+            z++
+        }
+
+        if (b == 2) {
+            z++
+        }
+        if (c == 2) {
+            z++
+        }
+        if (d == 2) {
+            z++
+        }
+
+        console.log("Atsitiktiniai skaičiai: " + a + " " + b + " " + c + " " + d + ". " + "Nulių kiekis: " + x + " Vienetų kiekis: " + y + " Dvejetų kiekis: " + z)
 
     </script>
-
-<script>
-    function rand(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1) + min);
-    }
-    let a = rand(0, 2);
-    let b = rand(0, 2);
-    let c = rand(0, 2);
-    let d = rand(0, 2);
-    let x = 0;
-    let y = 0;
-    let z = 0;
-
-    
-
-    console.log("Atsitiktiniai skaičiai: " + a + " " + b + " " + c + " " + d + ". " + "Nulių kiekis: " + x)
-
-</script>
-
 </body>
 
 </html>
