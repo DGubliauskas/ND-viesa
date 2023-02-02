@@ -602,3 +602,32 @@ margin-bottom:0.5rem;
     height: 40px;
     font-size: 16px;
 }
+
+#faq .questionfield {
+    display: flex;
+}
+
+#faq .questionfield img {
+    width: 40%;
+    height: 60%
+}
+
+.accordion {
+    width: 60%
+}
+
+.accordion .answer {
+    display: none;
+}
+
+.accordion .question {
+    cursor: pointer;
+
+}
+.accordion .question h2 {
+    font-size: 16px;
+    color: #536976;
+    background: white;
+
+
+}
