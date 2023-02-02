@@ -17,17 +17,17 @@
         }
         //Pasinaudokite atsitiktinio skaičiaus generavimo funkcija.Sukurkite du kintamuosius ir naudodamiesi funkcija jiems priskirkite atsitiktines reikšmes nuo 0 iki 4. Didesnę reikšmę padalinkite iš mažesnės.Atspausdinkite rezultatą jį suapvalinę iki 2 skaičių po kablelio.
         console.log("Pirma užduotis")
-        let randNumb = rand(0, 4);
-        let randNumb2 = rand(0, 4);
+        let randNumb = rand(0,4);
+        let randNumb2 = rand(0,4);
         let answer;
         let suapvalintas;
         console.log(randNumb);
-        console.log(randNumb2)
+        console.log(randNumb2);
         
 
 
 
-        if (randNumb > randNumb2 && randNumb2 > 0 || randNumb === randNumb2) {
+        if (randNumb > randNumb2 && randNumb2 > 0) {
             answer = (randNumb / randNumb2).toFixed(2)
         } else if (randNumb < randNumb2 && randNumb > 0) {
             answer = (randNumb2 / randNumb).toFixed(2)
@@ -58,15 +58,17 @@
 
 
         //Sukurti du kintamuosius.Jiems priskirti savo mylimo aktoriaus vardą ir pavardę kaip stringus.Sukurti trečią kintamąjį ir jam priskirti stringą, sudarytą iš pirmų vardo ir pavardės kintamųjų raidžių.Jį atspausdinti.
-        console.log("Trečia užduotis")
+        console.log("Trečia užduotis");
         let vardas = "Gitanas";
-        let pavarde = "Nausėda"
-        let inicialai = vardas[0] + pavarde[0]
+        let pavarde = "Nausėda";
+        let inicialai = vardas[0] + pavarde[0];
         console.log(inicialai)
         //Parašyti kodą, kuris generuotų atsitiktinį stringą iš lotyniškų mažųjų raidžių.Stringo ilgis 3 simboliai.
-        console.log("Ketvirta užduotis")
-        let abecele = "aąbcčdeęėfghiįyjklmnoprsštuųūbzž";
-        let randomLetters = abecele[abecele.length - rand(1, 32)] + abecele[abecele.length - rand(1, 32)] + abecele[abecele.length - rand(1, 32)]
+
+        
+        console.log("Ketvirta užduotis");
+        let abecele = "aąbcčdeęėfghiįyjklmnoprsštuųūzž";
+        let randomLetters = abecele[rand(0, 31)] + abecele[rand(0, 31)] + abecele[rand(0, 31)]
 
         console.log(randomLetters)
     </script>
