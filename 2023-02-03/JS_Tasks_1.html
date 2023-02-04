@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        width: 400px;
+    }
+
+    .raudona {
+        color: red;
+    }
+</style>
+</head>
+
+<body>
+
+    <script>
+function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+let star = "*"
+let star_400 = star.repeat(400);
+let fifty = " "
+while (fifty.length <= star_400.length) {
+fifty+=star_400.slice(-50) + "\n";
+}
+
+document.write("Pirma užduotis")
+document.write("\n" + fifty)
+
+
+i = 300
+let atsitiktinis = " "
+let patikrinimas = " "
+let daugiau150 = 0
+while (i>0) {
+    patikrinimas = rand(0,300);
+    if (patikrinimas > 275) {
+        atsitiktinis  += `<span class="raudona">${patikrinimas}</span>` + " "
+      } atsitiktinis += patikrinimas + " "
+    if (patikrinimas > 150) {
+        daugiau150++
+    }
+    i--
+}
+
+
+
+document.write(atsitiktinis)
+document.write("Didesnių nei šimtas penkiasdešimt skaičių kiekis: ", daugiau150)
+
+
+    </script>
+    
+</body>
+</html>
