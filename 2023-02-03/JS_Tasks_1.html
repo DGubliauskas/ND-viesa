@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
     body {
-        width: 400px;
+        width: 600px;
     }
 
     .raudona {
@@ -33,7 +33,9 @@ fifty+=star_400.slice(-50) + "\n";
 }
 
 document.write("Pirma užduotis")
+document.write("<br>");
 document.write("\n" + fifty)
+document.write("<br>");
 
 
 i = 300
@@ -52,11 +54,47 @@ while (i>0) {
 }
 
 
-
+document.write("<br>");
 document.write(atsitiktinis)
+document.write("<br>");
 document.write("Didesnių nei šimtas penkiasdešimt skaičių kiekis: ", daugiau150)
+document.write("<br>");
+
+let x=3000
+let y=1
+let y_max = 0
+let z=" "
+
+while (x > y) {
+     if (y%77 === 0) {
+        z+= y + ", ";
+        y_max = Math.max(y)
+     } 
+
+     y++
+}
+document.write("<br>");
+document.write(z.slice(0, z.length-2))
+document.write("<br>");
+console.log(z)
 
 
+document.write(`<p class="square">`);
+let height = 100;
+while (height) {
+  let width = 100;
+  while (width) {
+    if (width === height || width + height === 101) {
+      document.write(`<span style="color:red">*</span>`);
+    } else {
+      document.write(`*`);
+    }
+    width--;
+  }
+  document.write("<br>");
+  height--;
+}
+document.write(`</p>`);
     </script>
     
 </body>

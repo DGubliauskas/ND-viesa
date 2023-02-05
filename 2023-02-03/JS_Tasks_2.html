@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      // Metam monetą. Monetos kritimo rezultatą imituojam rand() funkcija, kur 0 yra herbas, o 1 - skaičius. Monetos metimo rezultatus išvedame į ekraną atskiroje eilutėje: “S” jeigu iškrito skaičius ir “H” jeigu herbas. Suprogramuokite keturis skirtingus scenarijus kai monetos metimą stabdome:
+//Iškritus herbui;
+//Tris kartus iškritus herbui;
+//Tris kartus iš eilės iškritus herbui; 
+
+function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+
+//Herbo ir skaičiaus simuliatorius
+
+
+//Iškritus herbui
+
+let pirmasVariantas = ""
+i = 0
+
+while (true) {
+    let skaicius = rand(0,1)
+    if (skaicius == 1) {
+        document.write("S")
+    } else if (skaicius == 0) {
+        document.write("H")
+    }
+    if (skaicius == 0) {
+        break
+    }
+    i++
+}
+
+document.write("<br>");
+let z = 0;
+let tekstas2 = ""
+let HPatikrinimas = ""
+
+while (true) {
+    let skaicius3 = rand(0,1)
+    if (skaicius3 == 1) {
+        tekstas2 += "S"
+    } else if (skaicius3 == 0) {
+        tekstas2 += "H"
+        HPatikrinimas += "H"
+    }
+    if (HPatikrinimas.includes('HHH')) {
+        break
+    }
+    z++
+}
+document.write(tekstas2)
+
+document.write("<br>");
+let y = 0;
+let tekstas = ""
+
+while (true) {
+    let skaicius2 = rand(0,1)
+    if (skaicius2 == 1) {
+        tekstas += "S"
+    } else if (skaicius2 == 0) {
+        tekstas += "H"
+    }
+    if (tekstas.includes('HHH')) {
+        break
+    }
+    y++
+}
+document.write(tekstas);
+
+document.write("<br>");
+let loop = 0;
+
+while (true) {
+  let petroTaskai = rand(10,20);
+  let kazioTaskai = rand(5, 25);
+  let petroTaskaiSuma = 0;
+  let kazioTaskaiSuma = 0;
+  while (petroTaskaiSuma <= 222 || kazioTaskaiSuma <= 222) {
+    petroTaskaiSuma += petroTaskai
+    kazioTaskaiSuma += kazioTaskai
+  }
+  if (petroTaskaiSuma > kazioTaskaiSuma) {
+    console.log("Petro taškai:" + petroTaskaiSuma + " Kazio taškai:" + kazioTaskaiSuma + ". Partiją laimėjo Petras")
+  } else {
+    console.log("Petro taškai:" + petroTaskaiSuma + " Kazio taškai:" + kazioTaskaiSuma + ". Partiją laimėjo Kazys")
+  }
+  loop++
+  if(loop > 0) {
+    break
+  }
+
+  let petroTaskai2 = rand(10,20);
+  let kazioTaskai2 = rand(5, 25);
+  let petroTaskaiSuma2 = 0;
+  let kazioTaskaiSuma2 = 0;
+  let bbz = 0
+  while (true) {
+    petroTaskaiSuma2 += petroTaskai2
+    kazioTaskaiSuma2 += kazioTaskai2
+  if (true) {
+    console.log("Petro taškai:" + petroTaskaiSuma2 + " Kazio taškai:" + kazioTaskaiSuma2 + ". Partiją laimėjo Petras")
+  } else {
+    console.log("Petro taškai:" + petroTaskaiSuma2 + " Kazio taškai:" + kazioTaskaiSuma2 + ". Partiją laimėjo Kazys")
+  }
+
+  if (petroTaskaiSuma2 > 222) {
+    break;
+  }
+
+  if (kazioTaskaiSuma2 > 222) {
+    break;
+  }
+  
+  bbz++
+  }
+}
+
+
+
+</script>
+</body>
+</html>
