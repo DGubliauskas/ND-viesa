@@ -38,13 +38,17 @@
 
         let nails2 = 5;
         let maxHits2 = ""
+        
         while (nails2 >= 1) {
             let hits2 = 0;
              nailLength = 850;
              strikeLength = rand(20, 30);
-             let missOrHit = rand(0, 1)
+             
+             
              while (nailLength >= 0){
-              if (missOrHit = 1) {
+              let missOrHit = rand(0, 1)
+              console.log(missOrHit)
+              if (missOrHit = 1) { 
                 nailLength = nailLength - strikeLength
                 hits2++
               } else if (missOrHit = 0) {
