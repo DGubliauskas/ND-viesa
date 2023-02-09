@@ -10,6 +10,7 @@
     <script>
         //Sumodeliuokite vinies kalimą. Įkalimo gylį sumodeliuokite pasinaudodami rand() funkcija. 
         //Vinies ilgis 8.5cm (pilnai sulenda į lentą).
+        //“Įkalkite” 5 vinis mažais smūgiais. Vienas smūgis vinį įkala 5-20 mm. Suskaičiuokite kiek reikia smūgių.
         function rand(min, max) {
             min = Math.ceil(min);
             max = Math.floor(max);
@@ -19,17 +20,45 @@
         
         
         let nails = 5;
-        while (nails >= 0) {
+        let maxHits = ""
+        while (nails >= 1) {
+            let hits = 0;
              let nailLength = 850;
-             let hits = 0;
              let strikeLength = rand(5, 20);
              while (nailLength >= 0) {
                 nailLength = nailLength - strikeLength
-                hits++
-                console.log(hits)
+                hits ++
              }
+             console.log(Math.max(hits))
+             maxHits += Math.max(hits) + " "
+             
             nails--
         }
+        document.write ("Norint įkalti penkias vinis reikės:", maxHits, "smūgių")
+
+        let nails2 = 5;
+        let maxHits2 = ""
+        while (nails2 >= 1) {
+            let hits2 = 0;
+             nailLength = 850;
+             strikeLength = rand(20, 30);
+             let missOrHit = rand(0, 1)
+             while (nailLength >= 0){
+              if (missOrHit = 1) {
+                nailLength = nailLength - strikeLength
+                hits2++
+              } else if (missOrHit = 0) {
+                hits2++
+              }
+             
+             }
+             console.log(Math.max(hits2))
+             maxHits2 += Math.max(hits2) + " "
+             
+            nails2--
+        }
+        document.write ("<br>")
+        document.write ("Norint įkalti penkias vinis su 50proc. pataikymo šansu reikės:", maxHits2, "smūgių")
 
     </script>
 </body>
