@@ -43,22 +43,18 @@
             let hits2 = 0;
              nailLength = 850;
              strikeLength = rand(20, 30);
-             
-             
              while (nailLength >= 0){
               let missOrHit = rand(0, 1)
               console.log(missOrHit)
-              if (missOrHit = 1) { 
+              if (missOrHit == 1) { 
                 nailLength = nailLength - strikeLength
                 hits2++
-              } else if (missOrHit = 0) {
+              } else if (missOrHit == 0) {
                 hits2++
               }
-             
              }
              console.log(Math.max(hits2))
              maxHits2 += Math.max(hits2) + " "
-             
             nails2--
         }
         document.write ("<br>")
