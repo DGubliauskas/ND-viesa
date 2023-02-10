@@ -20,28 +20,27 @@
         
         
         let nails = 5;
-        let maxHits = ""
+        let hits = 0
         while (nails >= 1) {
-            let hits = 0;
-             let nailLength = 850;
+            
+             let nailLength = 85
              let strikeLength = rand(5, 20);
              while (nailLength >= 0) {
                 nailLength = nailLength - strikeLength
                 hits ++
              }
-             console.log(Math.max(hits))
-             maxHits += Math.max(hits) + " "
+             
              
             nails--
         }
-        document.write ("Norint įkalti penkias vinis reikės:", maxHits, "smūgių")
+        document.write ("Norint įkalti penkias vinis reikės: ", hits, "smūgių")
 
         let nails2 = 5;
         let maxHits2 = ""
         
         while (nails2 >= 1) {
             let hits2 = 0;
-             nailLength = 850;
+             nailLength = 85;
              strikeLength = rand(20, 30);
              while (nailLength >= 0){
               let missOrHit = rand(0, 1)
@@ -49,7 +48,7 @@
               if (missOrHit == 1) { 
                 nailLength = nailLength - strikeLength
                 hits2++
-              } else if (missOrHit == 0) {
+              } else if (missOrHit == 0){ 
                 hits2++
               }
              }
@@ -58,7 +57,7 @@
             nails2--
         }
         document.write ("<br>")
-        document.write ("Norint įkalti penkias vinis su 50proc. pataikymo šansu reikės:", maxHits2, "smūgių")
+        document.write ("Norint įkalti penkias vinis su 50proc. pataikymo šansu reikės: ", maxHits2, "smūgių")
 
     </script>
 </body>
