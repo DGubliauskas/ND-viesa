@@ -603,6 +603,9 @@ margin-bottom:0.5rem;
     font-size: 16px;
 }
 
+#faq {
+    background-color: #f8f9fa;
+}
 #faq .questionfield {
     display: flex;
 }
@@ -630,4 +633,51 @@ margin-bottom:0.5rem;
     background: white;
 
 
+}
+
+.mobileApps h1 {
+font-weight: 700;
+font-size: 48px;
+padding: 0 250px;
+text-align:center
+}
+
+.mobileApps p {
+    text-align: center;
+    padding: 0 150px;
+    margin-bottom: 1.5rem;
+}
+
+.mobileApps .appStore {
+ display:flex;
+ justify-content: center;
+ gap: 10px;
+ transform: scale(0.9);
+}
+
+.contacts {
+    display:flex;
+}
+.sayHello {
+ display: flex;
+ vertical-align:middle;
+ align-items:center;
+}
+
+.sayHello img {
+    transform:scale(0.5);
+}
+
+.sayHello h1 {
+    font-size: 28px;
+    font-weight: 50;
+}
+
+.iconContact {
+    display: flex;
+
+}
+
+.iconContact h5 {
+    margin: none;
 }
