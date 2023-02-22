@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        let masyvas = [];
+        let raides = 'ABCD';
+        let raidziuKiekiai = {
+            a: 0,
+            b: 0,
+            c: 0,
+            d: 0
+        };
+
+        for(let i = 0; i < 200; i++) {
+            let raide = raides[rand(0, raides.length - 1)];
+            masyvas[masyvas.length] = raide;
+
+            if(raide === 'A')
+                raidziuKiekiai.a++;
+
+            if(raide === 'B')
+                raidziuKiekiai.b++;
+
+            if(raide === 'C')
+                raidziuKiekiai.c++;
+
+            if(raide === 'D')
+                raidziuKiekiai.d++;
+        }
+        document.write(masyvas);
+
+document.write(`A: ${raidziuKiekiai.a}, B: ${raidziuKiekiai.b}, C: ${raidziuKiekiai.c}, D: ${raidziuKiekiai.d}`);
+
+document.write('<h2>Ketvirta užduotis</h2>');
+
+masyvas.sort();
+
+document.write(`Išrūšiuotas masyvas:`, masyvas);
+    </script>
+</body>
+</html>

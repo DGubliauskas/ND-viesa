@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        document.write("<b>Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25.</b>")
+
+        let randArray = []
+        for (i = 0; i < 30; i++) {
+            randArray.push(rand(5, 25))
+        }
+        document.write("<br></ br>");
+        document.write(randArray);
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("<b>Naudodamiesi 1 uždavinio masyvu:</b>")
+        document.write("<br></ br>");
+        document.write("<b>a) Suskaičiuokite kiek masyve yra reikšmių didesnių už 10;</b>")
+
+        let counter = 0;
+        for (i = 0; i < randArray.length; i++) {
+            if (randArray[i] > 10) {
+                counter++
+            }
+        }
+
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("Didesnių nei 10 skaičių kiekis masyve: ", counter)
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("<b>b) Raskite didžiausią masyvo reikšmę ir jos indeksą arba indeksus jeigu yra keli;</b>")
+
+        let maxNumber = 0;
+        let arrayPlace = "";
+
+        for (i = 0; i < randArray.length; i++) {
+            let arrayNumber = randArray[i]
+            if (arrayNumber >= maxNumber) {
+                maxNumber = arrayNumber
+            }
+        }
+
+        for (i = 0; i < randArray.length; i++) {
+            if (maxNumber == randArray[i]) {
+                arrayPlace += i + " ";
+            }
+        }
+
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("Didžiausias skaičius masyve: ", maxNumber)
+        document.write("<br></ br>");
+        document.write("Didžiausio skaičiaus masyve indeksas(-ai): ", arrayPlace)
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("<b>c) Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;</b>")
+
+        let arrayEven = 0;
+        for (i = 0; i < randArray.length; i++) {
+            if (randArray[i] % 2 == 0) {
+                arrayEven++
+            }
+        }
+
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write("Porinių skaičių kiekis masyve: ", arrayEven)
+        document.write("<br></ br>");
+        document.write("<br><b>d) Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;</b></ br>")
+        document.write("<br></ br>");
+
+        let minusOne = []
+        for (i = 0; i < randArray.length; i++) {
+            minusOne.push(randArray[i] - i)
+        }
+
+        document.write("<br></ br>");
+        document.write(minusOne)
+        document.write("<br></ br>");
+        document.write("<br><b>e) Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39; </b></ br>")
+
+        let newArray = [randArray]
+        for (i = 0; i < 9; i++) {
+            randArray.push(rand(5, 25))
+        }
+
+        document.write("<br></ br>");
+        document.write("<br></ br>");
+        document.write(newArray)
+        document.write("<br></ br>");
+        document.write("<br><b>f) Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indeksų reikšmių, o kitas iš porinių; </b></ br>")
+
+        let evensOnly = [];
+        let notEvensOnly = [];
+        for (i = 0; i < randArray.length; i++) {
+            if (i % 2 == 0) {
+                evensOnly.push(randArray[i])
+            } else {
+                notEvensOnly.push(randArray[i])
+            }
+        }
+
+        document.write("<br></ br>");
+        document.write("Poriniai:", evensOnly);
+        document.write("<br></ br>");
+        document.write("Neporiniai:", notEvensOnly)
+
+
+        // console.log(evensOnly);
+        //console.log(notEvensOnly)
+
+        document.write("<br></ br>");
+        document.write("<br><b>g) Pirminio masyvo elementus su poriniais indeksais padarykite lygius 0 jeigu jie didesni už 15;</b></ br>")
+        let evenIndexes = []
+        for (i = 0; i < randArray.length; i++) {
+            if (i % 2 == 0) {
+                if (randArray[i] > 15) {
+                    evenIndexes.push(0)
+                } else {
+                    evenIndexes.push(randArray[i])
+                }
+            }
+        }
+        document.write("<br></ br>");
+            document.write(evenIndexes)
+            console.log(evenIndexes)
+            console.log(randArray)
+
+            document.write("<br><b> h) Suraskite pirmą indeksą, kurio elemento reikšmė didesnė už 10;</b></ br>")
+
+let pirmas_indeksas;
+
+        for(let i in masyvas) {
+            if(masyvas[i] > 10) {
+                pirmas_indeksas = i;
+                break;
+            } 
+        }
+        document.write(`Didesnės nei dešimt reikšmės pirmas indeksas: ${pirmas_indeksas}`);
+
+        for(let i = 0; i < masyvas.length; i++) {
+            masyvas.splice(i, 1);
+        }
+
+    </script>
+</body>
+
+</html>

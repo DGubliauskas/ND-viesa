@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function rand(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        document.write("<b>Sugeneruokite masyvą iš 30 elementų (indeksai nuo 0 iki 29), kurių reikšmės yra atsitiktiniai skaičiai nuo 5 iki 25.</b>")
+document.write("<br>")
+
+        let randArray = []
+        for (i = 0; i < 30; i++) {
+            randArray.push(rand(5,25))
+        }
+        document.write("<br>")
+        document.write(randArray)
+
+        let arrayEven = [];
+        for (i = 0; i<randArray.length; i++) {
+            if(i%2 == 0) {
+                arrayEven.push(randArray[i])
+            }
+        }
+        document.write("<br>")
+        document.write(arrayEven)
+    </script>
+</body>
+</html>
