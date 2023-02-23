@@ -664,20 +664,40 @@ text-align:center
  align-items:center;
 }
 
-.sayHello img {
+.location p {
+    margin: 0;
+}
+
+.location .sayHello img {
     transform:scale(0.5);
 }
 
-.sayHello h1 {
+.location .sayHello h1 {
     font-size: 28px;
     font-weight: 50;
 }
 
-.iconContact {
+.location .iconContact {
     display: flex;
-
+    gap: 10px;
+    align-items: center;
 }
 
-.iconContact h5 {
-    margin: none;
+.location .iconContact i {
+    width: 35px;
+    height: 35px;
+    color: #1f61eb;
+    background-color: #d8e2f8;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+.location .iconContact h5 {
+    font-size: 18px;
+}
+
+.location p i {
+    margin-right: 5px;
+    font-size: 12px;
+    
 }
