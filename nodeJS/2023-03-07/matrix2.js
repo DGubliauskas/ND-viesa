@@ -9,7 +9,7 @@ function rand(min, max) {
 let xCol = process.stdout.columns;
 let yRow = process.stdout.rows;
 
-let letters = "abcdefghijklmnoprstuvxyzABCDEFGHIJKLMNOPRSTUVXYZ123456789!@#$%^&*()+={[}]|,.<>"
+let letters = "abcdefghijklmnoprstuvxyzABCDEFGHIJKLMNOPRSTUVXYZ123456789!@#$%^&*()+={[}]|,.                                      "
 let xPosition = 1
 let randLetter = ""
 let randChance = ""
@@ -33,4 +33,4 @@ setInterval(() => {
     randChance = ""
                  for(let i = 0; i < xCol; i++) {
                     randChance += rand(0, 9)
-                 }}, 750) 
+                 }}, 1250) 
