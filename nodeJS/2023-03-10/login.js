@@ -5,28 +5,23 @@ import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 const rl = readline.createInterface({ input, output });
 
-
-const generator = {
-Name: faker.name.firstName(),
-Surname: faker.name.lastName(),
-Password: faker.internet.password(),
-Email: faker.internet.email(),
-Birthday: faker.date.birthdate()}
-
-await fs.writeFile("people.txt", JSON.stringify(generator))
-
 const user     = await rl.question('Vartotojas:');
 const pass     = await rl.question('Slaptažodis:');
 
-console.log("Vardas:", user)
-console.log("Slaptažodis:", pass)
+if(user === 'admin' && pass === '1234') {
 
-try {
-    user == "User";
-    pass == "1234";
-} catch {
-    console.log("Suvesti duomenys neteisingi")
-} console.log("Suvesti duomenys teisingi")
+const name = faker.name.firstName()
+const surname = faker.name.lastName()
+const password =  faker.internet.password()
+const email = faker.internet.email()
+const birthdate = faker.date.birthdate()
+
+await fs.writeFile("people.txt", `${name}\t${surname}\t${password}\t${email}\t${birthdate.toLocaleDateString('lt-LT')}\n`)
+
+} else {
+    console.log('Neteisingi prisijungimo duomenys')
+}
+
 
 /*if (user != "User" || pass != "1234") {
   console.log("Prisijungimo duomenys neteisingi")
