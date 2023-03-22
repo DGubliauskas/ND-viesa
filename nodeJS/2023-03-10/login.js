@@ -21,9 +21,3 @@ await fs.writeFile("people.txt", `${name}\t${surname}\t${password}\t${email}\t${
 } else {
     console.log('Neteisingi prisijungimo duomenys')
 }
-
-
-/*if (user != "User" || pass != "1234") {
-  console.log("Prisijungimo duomenys neteisingi")
-} else {
-    console.log("Viskas gerai") }*/
