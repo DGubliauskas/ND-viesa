@@ -11,13 +11,19 @@ console.log("Didesnių nei 10 skaičių kiekis:" + ten)
 
 // b)	Raskite didžiausią masyvo reikšmę ir jos indeksą;
 
-let biggest = 0;
-masyvas.forEach(element => element > biggest ? (biggest = element) : (biggest + 0))
+
+let biggest = 0
+const biggestCalc = masyvas.forEach(element => element > biggest ? (biggest = element) : (biggest + 0))
 
 
 console.log(biggest);
-console.log(masyvas.indexOf(biggest));
+
 // c)	Suskaičiuokite visų porinių (lyginių) indeksų reikšmių sumą;
+
+let pairIndex = 0
+let pairIndexCalc = masyvas.forEach(element => element % 2 === 0 ? pairIndex += element : pairIndex + 0)
+console.log(pairIndex);
+
 // d)	Sukurkite naują masyvą, kurio reikšmės yra 1 uždavinio masyvo reikšmes minus tos reikšmės indeksas;
 // e)	Papildykite masyvą papildomais 10 elementų su reikšmėmis nuo 5 iki 25, kad bendras masyvas padidėtų iki indekso 39;
 // f)	Iš masyvo elementų sukurkite du naujus masyvus. Vienas turi būti sudarytas iš neporinių indeksų reikšmių, o kitas iš porinių (pagal neporinį-porinį indeksą, ne reikšmę);
