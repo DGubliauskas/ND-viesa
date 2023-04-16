@@ -70,7 +70,7 @@ function App() {
         </div>
         <div className="squares">
           {
-            sq2.map((redblue, i) => <Square sqci="square" style = {{color: redblue}}  />)
+            sq2.map((redblue, i) => <Square sqci="square" redblue={redblue} />)
           }
           </div>
           <div className="squares">
